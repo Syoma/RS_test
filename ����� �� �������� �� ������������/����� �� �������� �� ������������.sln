@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "Отчет по контролю за овердрафтами", "Отчет по контролю за овердрафтами\Отчет по контролю за овердрафтами.rptproj", "{4B2E4BE1-3647-4322-A524-3F55BA589DCC}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 2
+		SccProjectName0 = \u0022$/ReportServer/Отчет\u0020по\u0020контролю\u0020за\u0020овердрафтами\u0022,\u0020DKSBAAAA
+		SccLocalPath0 = .
+		SccProvider0 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		CanCheckoutShared = false
+		SccProjectUniqueName1 = Отчет\u0020по\u0020контролю\u0020за\u0020овердрафтами\\Отчет\u0020по\u0020контролю\u0020за\u0020овердрафтами.rptproj
+		SccLocalPath1 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection1 = Отчет\u0020по\u0020контролю\u0020за\u0020овердрафтами\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Production|Default = Production|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4B2E4BE1-3647-4322-A524-3F55BA589DCC}.Debug|Default.ActiveCfg = Debug
+		{4B2E4BE1-3647-4322-A524-3F55BA589DCC}.Debug|Default.Build.0 = DebugLocal
+		{4B2E4BE1-3647-4322-A524-3F55BA589DCC}.Debug|Default.Deploy.0 = DebugLocal
+		{4B2E4BE1-3647-4322-A524-3F55BA589DCC}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{4B2E4BE1-3647-4322-A524-3F55BA589DCC}.DebugLocal|Default.Build.0 = DebugLocal
+		{4B2E4BE1-3647-4322-A524-3F55BA589DCC}.Production|Default.ActiveCfg = Production
+		{4B2E4BE1-3647-4322-A524-3F55BA589DCC}.Production|Default.Build.0 = Production
+		{4B2E4BE1-3647-4322-A524-3F55BA589DCC}.Production|Default.Deploy.0 = Production
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

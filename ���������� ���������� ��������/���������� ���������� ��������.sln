@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "Мониторинг реализации запретов", "Мониторинг реализации запретов\Мониторинг реализации запретов.rptproj", "{57B90E2E-A347-4745-A96F-EA49B89E4088}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 2
+		SccProjectName0 = \u0022$/ReportServer\u0022,\u0020TCLAAAAA
+		SccLocalPath0 = ..
+		SccProvider0 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection0 = Мониторинг\u0020реализации\u0020запретов\\
+		SccProjectUniqueName1 = Мониторинг\u0020реализации\u0020запретов\\Мониторинг\u0020реализации\u0020запретов.rptproj
+		SccLocalPath1 = ..
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection1 = Мониторинг\u0020реализации\u0020запретов\\Мониторинг\u0020реализации\u0020запретов\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Production|Default = Production|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{57B90E2E-A347-4745-A96F-EA49B89E4088}.Debug|Default.ActiveCfg = Debug
+		{57B90E2E-A347-4745-A96F-EA49B89E4088}.Debug|Default.Build.0 = DebugLocal
+		{57B90E2E-A347-4745-A96F-EA49B89E4088}.Debug|Default.Deploy.0 = DebugLocal
+		{57B90E2E-A347-4745-A96F-EA49B89E4088}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{57B90E2E-A347-4745-A96F-EA49B89E4088}.DebugLocal|Default.Build.0 = DebugLocal
+		{57B90E2E-A347-4745-A96F-EA49B89E4088}.Production|Default.ActiveCfg = Production
+		{57B90E2E-A347-4745-A96F-EA49B89E4088}.Production|Default.Build.0 = Production
+		{57B90E2E-A347-4745-A96F-EA49B89E4088}.Production|Default.Deploy.0 = Production
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

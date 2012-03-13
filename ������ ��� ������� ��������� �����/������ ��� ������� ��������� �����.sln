@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "Отчеты для платных складских услуг", "Отчеты для платных складских услуг\Отчеты для платных складских услуг.rptproj", "{E62C1545-9627-4D5A-996E-AAE01F95F09A}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 2
+		SccProjectName0 = \u0022$/ReportServer/Отчеты\u0020для\u0020платных\u0020складских\u0020услуг\u0022,\u0020LADBAAAA
+		SccLocalPath0 = .
+		SccProvider0 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		CanCheckoutShared = false
+		SccProjectUniqueName1 = Отчеты\u0020для\u0020платных\u0020складских\u0020услуг\\Отчеты\u0020для\u0020платных\u0020складских\u0020услуг.rptproj
+		SccLocalPath1 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection1 = Отчеты\u0020для\u0020платных\u0020складских\u0020услуг\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Production|Default = Production|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E62C1545-9627-4D5A-996E-AAE01F95F09A}.Debug|Default.ActiveCfg = Debug
+		{E62C1545-9627-4D5A-996E-AAE01F95F09A}.Debug|Default.Build.0 = DebugLocal
+		{E62C1545-9627-4D5A-996E-AAE01F95F09A}.Debug|Default.Deploy.0 = DebugLocal
+		{E62C1545-9627-4D5A-996E-AAE01F95F09A}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{E62C1545-9627-4D5A-996E-AAE01F95F09A}.DebugLocal|Default.Build.0 = DebugLocal
+		{E62C1545-9627-4D5A-996E-AAE01F95F09A}.Production|Default.ActiveCfg = Production
+		{E62C1545-9627-4D5A-996E-AAE01F95F09A}.Production|Default.Build.0 = Production
+		{E62C1545-9627-4D5A-996E-AAE01F95F09A}.Production|Default.Deploy.0 = Production
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

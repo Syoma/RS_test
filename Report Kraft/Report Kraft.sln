@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "Report Kraft", "Report Kraft\Report Kraft.rptproj", "{FEC04EC3-5D3C-4F60-AA2B-ED992CCD2B28}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 2
+		SccProjectName0 = \u0022$/ReportServer/Report\u0020Kraft\u0022,\u0020MFTAAAAA
+		SccLocalPath0 = .
+		SccProvider0 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		CanCheckoutShared = false
+		SccProjectUniqueName1 = Report\u0020Kraft\\Report\u0020Kraft.rptproj
+		SccLocalPath1 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection1 = Report\u0020Kraft\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Production|Default = Production|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FEC04EC3-5D3C-4F60-AA2B-ED992CCD2B28}.Debug|Default.ActiveCfg = Debug
+		{FEC04EC3-5D3C-4F60-AA2B-ED992CCD2B28}.Debug|Default.Build.0 = DebugLocal
+		{FEC04EC3-5D3C-4F60-AA2B-ED992CCD2B28}.Debug|Default.Deploy.0 = DebugLocal
+		{FEC04EC3-5D3C-4F60-AA2B-ED992CCD2B28}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{FEC04EC3-5D3C-4F60-AA2B-ED992CCD2B28}.DebugLocal|Default.Build.0 = DebugLocal
+		{FEC04EC3-5D3C-4F60-AA2B-ED992CCD2B28}.Production|Default.ActiveCfg = Production
+		{FEC04EC3-5D3C-4F60-AA2B-ED992CCD2B28}.Production|Default.Build.0 = Production
+		{FEC04EC3-5D3C-4F60-AA2B-ED992CCD2B28}.Production|Default.Deploy.0 = Production
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

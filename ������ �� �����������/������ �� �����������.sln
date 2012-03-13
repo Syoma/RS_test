@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "Заказы на перемещения", "Заказы на перемещения\Заказы на перемещения.rptproj", "{5625738B-50B2-496A-90A8-C815C62A3745}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 2
+		SccProjectName0 = \u0022$/ReportServer/Заказы\u0020на\u0020перемещения\u0022,\u0020AITBAAAA
+		SccLocalPath0 = .
+		SccProvider0 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		CanCheckoutShared = false
+		SccProjectUniqueName1 = Заказы\u0020на\u0020перемещения\\Заказы\u0020на\u0020перемещения.rptproj
+		SccLocalPath1 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection1 = Заказы\u0020на\u0020перемещения\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Production|Default = Production|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5625738B-50B2-496A-90A8-C815C62A3745}.Debug|Default.ActiveCfg = Debug
+		{5625738B-50B2-496A-90A8-C815C62A3745}.Debug|Default.Build.0 = DebugLocal
+		{5625738B-50B2-496A-90A8-C815C62A3745}.Debug|Default.Deploy.0 = DebugLocal
+		{5625738B-50B2-496A-90A8-C815C62A3745}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{5625738B-50B2-496A-90A8-C815C62A3745}.DebugLocal|Default.Build.0 = DebugLocal
+		{5625738B-50B2-496A-90A8-C815C62A3745}.Production|Default.ActiveCfg = Production
+		{5625738B-50B2-496A-90A8-C815C62A3745}.Production|Default.Build.0 = Production
+		{5625738B-50B2-496A-90A8-C815C62A3745}.Production|Default.Deploy.0 = Production
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

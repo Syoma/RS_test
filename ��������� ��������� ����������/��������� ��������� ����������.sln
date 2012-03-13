@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "Изменения состояния терминалов", "Изменения состояния терминалов\Изменения состояния терминалов.rptproj", "{3EE3D09F-E9F2-4FED-B942-F3118FD6D5B2}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 2
+		SccLocalPath0 = .
+		CanCheckoutShared = false
+		SccProjectUniqueName1 = Изменения\u0020состояния\u0020терминалов\\Изменения\u0020состояния\u0020терминалов.rptproj
+		SccLocalPath1 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection1 = Изменения\u0020состояния\u0020терминалов\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Production|Default = Production|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3EE3D09F-E9F2-4FED-B942-F3118FD6D5B2}.Debug|Default.ActiveCfg = Debug
+		{3EE3D09F-E9F2-4FED-B942-F3118FD6D5B2}.Debug|Default.Build.0 = DebugLocal
+		{3EE3D09F-E9F2-4FED-B942-F3118FD6D5B2}.Debug|Default.Deploy.0 = DebugLocal
+		{3EE3D09F-E9F2-4FED-B942-F3118FD6D5B2}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{3EE3D09F-E9F2-4FED-B942-F3118FD6D5B2}.DebugLocal|Default.Build.0 = DebugLocal
+		{3EE3D09F-E9F2-4FED-B942-F3118FD6D5B2}.Production|Default.ActiveCfg = Production
+		{3EE3D09F-E9F2-4FED-B942-F3118FD6D5B2}.Production|Default.Build.0 = Production
+		{3EE3D09F-E9F2-4FED-B942-F3118FD6D5B2}.Production|Default.Deploy.0 = Production
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

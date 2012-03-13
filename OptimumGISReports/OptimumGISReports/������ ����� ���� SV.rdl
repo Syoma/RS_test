@@ -1,0 +1,737 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="Mobile_Unekt2">
+      <ConnectionProperties>
+        <ConnectString>Data Source=hqsrv00;Initial Catalog=Mobile_Unekt2</ConnectString>
+        <DataProvider>SQL</DataProvider>
+      </ConnectionProperties>
+      <rd:DataSourceID>88deb8ad-51cd-45b0-96d7-c6ff614b2e41</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <BottomMargin>2.5cm</BottomMargin>
+  <RightMargin>2.5cm</RightMargin>
+  <PageWidth>21cm</PageWidth>
+  <ReportParameters>
+    <ReportParameter Name="frep_fid">
+      <DataType>String</DataType>
+      <Prompt>Супервайзер/ТП</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>SalesRep</DataSetName>
+          <ValueField>fid</ValueField>
+          <LabelField>fName</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+  </ReportParameters>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>8.5in</InteractiveWidth>
+  <rd:GridSpacing>0.25cm</rd:GridSpacing>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <Body>
+    <ColumnSpacing>1cm</ColumnSpacing>
+    <ReportItems>
+      <Textbox Name="textbox1">
+        <rd:DefaultName>textbox1</rd:DefaultName>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontFamily>Tahoma</FontFamily>
+          <FontWeight>700</FontWeight>
+          <FontSize>20pt</FontSize>
+          <Color>SteelBlue</Color>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.91429cm</Height>
+        <Value>Список точек база SV</Value>
+      </Textbox>
+      <List Name="List1">
+        <Sorting>
+          <SortBy>
+            <SortExpression>=Fields!fName.Value</SortExpression>
+            <Direction>Ascending</Direction>
+          </SortBy>
+        </Sorting>
+        <ReportItems>
+          <Textbox Name="fName">
+            <rd:DefaultName>fName</rd:DefaultName>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontFamily>Tahoma</FontFamily>
+              <FontSize>14pt</FontSize>
+              <Color>SlateGray</Color>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.68571cm</Height>
+            <Value>=Fields!fName.Value</Value>
+          </Textbox>
+          <Table Name="table1">
+            <NoRows>Не найдено ни одной торговой точки</NoRows>
+            <DataSetName>Mobile_Unekt2</DataSetName>
+            <Top>1.26984cm</Top>
+            <Width>24.82936cm</Width>
+            <Details>
+              <TableRows>
+                <TableRow>
+                  <TableCells>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="sid_id">
+                          <rd:DefaultName>sid_id</rd:DefaultName>
+                          <ZIndex>4</ZIndex>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <FontFamily>Tahoma</FontFamily>
+                            <BorderColor>
+                              <Default>LightGrey</Default>
+                            </BorderColor>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value>=Fields!sid_id.Value</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="city">
+                          <rd:DefaultName>city</rd:DefaultName>
+                          <ZIndex>3</ZIndex>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <FontFamily>Tahoma</FontFamily>
+                            <BorderColor>
+                              <Default>LightGrey</Default>
+                            </BorderColor>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value>=Fields!city.Value</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="full_address">
+                          <rd:DefaultName>full_address</rd:DefaultName>
+                          <ZIndex>2</ZIndex>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <FontFamily>Tahoma</FontFamily>
+                            <BorderColor>
+                              <Default>LightGrey</Default>
+                            </BorderColor>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value>=Fields!full_address.Value</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="full_name">
+                          <rd:DefaultName>full_name</rd:DefaultName>
+                          <ZIndex>1</ZIndex>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <FontFamily>Tahoma</FontFamily>
+                            <BorderColor>
+                              <Default>LightGrey</Default>
+                            </BorderColor>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value>=Fields!full_name.Value</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="category">
+                          <rd:DefaultName>category</rd:DefaultName>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <FontFamily>Tahoma</FontFamily>
+                            <BorderColor>
+                              <Default>LightGrey</Default>
+                            </BorderColor>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value>=Fields!category.Value</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                  </TableCells>
+                  <Height>0.53333cm</Height>
+                </TableRow>
+              </TableRows>
+            </Details>
+            <Header>
+              <TableRows>
+                <TableRow>
+                  <TableCells>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox4">
+                          <rd:DefaultName>textbox4</rd:DefaultName>
+                          <ZIndex>9</ZIndex>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <TextAlign>Right</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <FontFamily>Tahoma</FontFamily>
+                            <FontWeight>700</FontWeight>
+                            <FontSize>11pt</FontSize>
+                            <BorderColor>
+                              <Default>LightGrey</Default>
+                            </BorderColor>
+                            <BackgroundColor>SteelBlue</BackgroundColor>
+                            <Color>White</Color>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value>#</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox5">
+                          <rd:DefaultName>textbox5</rd:DefaultName>
+                          <ZIndex>8</ZIndex>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <FontFamily>Tahoma</FontFamily>
+                            <FontWeight>700</FontWeight>
+                            <FontSize>11pt</FontSize>
+                            <BorderColor>
+                              <Default>LightGrey</Default>
+                            </BorderColor>
+                            <BackgroundColor>SteelBlue</BackgroundColor>
+                            <Color>White</Color>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value>Город</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox14">
+                          <rd:DefaultName>textbox14</rd:DefaultName>
+                          <ZIndex>7</ZIndex>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <FontFamily>Tahoma</FontFamily>
+                            <FontWeight>700</FontWeight>
+                            <FontSize>11pt</FontSize>
+                            <BorderColor>
+                              <Default>LightGrey</Default>
+                            </BorderColor>
+                            <BackgroundColor>SteelBlue</BackgroundColor>
+                            <Color>White</Color>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value>Адрес</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox18">
+                          <rd:DefaultName>textbox18</rd:DefaultName>
+                          <ZIndex>6</ZIndex>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <FontFamily>Tahoma</FontFamily>
+                            <FontWeight>700</FontWeight>
+                            <FontSize>11pt</FontSize>
+                            <BorderColor>
+                              <Default>LightGrey</Default>
+                            </BorderColor>
+                            <BackgroundColor>SteelBlue</BackgroundColor>
+                            <Color>White</Color>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value>Вывеска, юрлицо</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox59">
+                          <rd:DefaultName>textbox59</rd:DefaultName>
+                          <ZIndex>5</ZIndex>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <FontFamily>Tahoma</FontFamily>
+                            <FontWeight>700</FontWeight>
+                            <FontSize>11pt</FontSize>
+                            <BorderColor>
+                              <Default>LightGrey</Default>
+                            </BorderColor>
+                            <BackgroundColor>SteelBlue</BackgroundColor>
+                            <Color>White</Color>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value>катег.</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                  </TableCells>
+                  <Height>0.55873cm</Height>
+                </TableRow>
+              </TableRows>
+              <RepeatOnNewPage>true</RepeatOnNewPage>
+            </Header>
+            <TableColumns>
+              <TableColumn>
+                <Width>2.53968cm</Width>
+              </TableColumn>
+              <TableColumn>
+                <Width>2.53968cm</Width>
+              </TableColumn>
+              <TableColumn>
+                <Width>8.75cm</Width>
+              </TableColumn>
+              <TableColumn>
+                <Width>9.25cm</Width>
+              </TableColumn>
+              <TableColumn>
+                <Width>1.75cm</Width>
+              </TableColumn>
+            </TableColumns>
+            <Height>1.09206cm</Height>
+          </Table>
+        </ReportItems>
+        <DataSetName>Mobile_Unekt2</DataSetName>
+        <Top>0.91429cm</Top>
+        <Style>
+          <FontFamily>Tahoma</FontFamily>
+          <FontSize>14pt</FontSize>
+          <Color>SlateGray</Color>
+        </Style>
+        <Grouping Name="list1_fName">
+          <PageBreakAtEnd>true</PageBreakAtEnd>
+          <GroupExpressions>
+            <GroupExpression>=Fields!fName.Value</GroupExpression>
+          </GroupExpressions>
+        </Grouping>
+      </List>
+    </ReportItems>
+    <Height>4.54603cm</Height>
+  </Body>
+  <rd:ReportID>5101e93f-b4cd-426f-8bdb-3a5906a5e1f0</rd:ReportID>
+  <LeftMargin>2.5cm</LeftMargin>
+  <DataSets>
+    <DataSet Name="Mobile_Unekt2">
+      <Query>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+        <CommandText>select frep.fName, frep.fid, c.*, cl.*
+--select *
+from
+(select leg.sales_rep_fid, exid, category, x, y, count(1)
+from 
+(select
+  sales_rep_fid,
+  case when x1 &lt; x2 then x1 else x2 end x1,
+  case when x1 &lt; x2 then y1 else y2 end y1,
+  case when x1 &lt; x2 then x2 else x1 end x2,
+  case when x1 &lt; x2 then y2 else y1 end y2
+from 
+(select t1.id sales_rep_fid, t1.Lon x1, t1.Lat y1, t2.Lon x2, t2.Lat y2
+from DSGIS_Region t1
+  join DSGIS_Region t2 on (
+    t2.factiveflag = 1 and t2.id = t1.id
+    and (t2.RecordId = t1.RecordId + 1
+      or (t1.RecordId = (select max(t.RecordId) from DSGIS_Region t where t.id = t1.id and t.factiveflag = 1)
+        and t2.RecordId = (select min(t.RecordId) from DSGIS_Region t where t.id = t2.id and t.factiveflag = 1)
+      )
+    )
+  )
+where t1.factiveflag = 1
+) as leg_unordered (sales_rep_fid, x1, y1, x2, y2)
+) as leg (sales_rep_fid, x1, y1, x2, y2)
+
+join
+
+(select cast(f.exid as int), c.category, cast(ax.AttrText as float) x, cast(ay.AttrText as float) y
+from 
+DS_Faces f 
+  join DS_FacesAttributes ax on ax.fid = f.fid and ax.AttrID = 361
+  join DS_FacesAttributes ay on ay.fid = f.fid and ay.AttrID = 360
+  left outer join census..census_ba_raw_lym c on c.id = cast(f.exid as int)
+where f.fType = 1 
+  --and f.fid = 21848
+) as point (exid, category, x, y)
+
+on (
+  x2 &gt; x
+  and (
+    (x1 = x2 and ((y1 &lt; y and y2 &gt; y) or (y1 &gt; y and y2 &lt; y)))
+    or
+    (((y1 &lt; y and y2 &gt; y) or (y1 &gt; y and y2 &lt; y)) and x &lt; x1 + ((y-y1)*(x2-x1))/(y2-y1))
+  )
+)
+group by leg.sales_rep_fid, exid, category, x, y
+having count(1)%2 = 1
+) as terr_point (sales_rep_fid, exid, category, x, y, cnt)
+  join DS_Faces frep on frep.fid = sales_rep_fid
+  join census..census_ba_raw c on c.id = terr_point.exid
+  join census..census_ba_raw_lym cl on cl.id = terr_point.exid
+where frep.fid = (@frep_fid)
+  and cl.category &lt;&gt; 'x' and cl.category &lt;&gt; 'закрылся'
+order by c.city, c.street1, c.house1</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="@frep_fid">
+            <Value>=Parameters!frep_fid.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <DataSourceName>Mobile_Unekt2</DataSourceName>
+      </Query>
+      <Fields>
+        <Field Name="fName">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>fName</DataField>
+        </Field>
+        <Field Name="fid">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>fid</DataField>
+        </Field>
+        <Field Name="id">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>id</DataField>
+        </Field>
+        <Field Name="check_date">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>check_date</DataField>
+        </Field>
+        <Field Name="sid_id">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>sid_id</DataField>
+        </Field>
+        <Field Name="city">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>city</DataField>
+        </Field>
+        <Field Name="apart">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>apart</DataField>
+        </Field>
+        <Field Name="street1">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>street1</DataField>
+        </Field>
+        <Field Name="street_type1">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>street_type1</DataField>
+        </Field>
+        <Field Name="house1">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>house1</DataField>
+        </Field>
+        <Field Name="street2">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>street2</DataField>
+        </Field>
+        <Field Name="street_type2">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>street_type2</DataField>
+        </Field>
+        <Field Name="house2">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>house2</DataField>
+        </Field>
+        <Field Name="address_comment">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>address_comment</DataField>
+        </Field>
+        <Field Name="full_address">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>full_address</DataField>
+        </Field>
+        <Field Name="sign">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>sign</DataField>
+        </Field>
+        <Field Name="org_legal_name">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>org_legal_name</DataField>
+        </Field>
+        <Field Name="org_legal_type">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>org_legal_type</DataField>
+        </Field>
+        <Field Name="full_name">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>full_name</DataField>
+        </Field>
+        <Field Name="schedule">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>schedule</DataField>
+        </Field>
+        <Field Name="phone">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>phone</DataField>
+        </Field>
+        <Field Name="person">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>person</DataField>
+        </Field>
+        <Field Name="channel">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>channel</DataField>
+        </Field>
+        <Field Name="location_type">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>location_type</DataField>
+        </Field>
+        <Field Name="profile">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>profile</DataField>
+        </Field>
+        <Field Name="sale_type">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>sale_type</DataField>
+        </Field>
+        <Field Name="service_type">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>service_type</DataField>
+        </Field>
+        <Field Name="specialization">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>specialization</DataField>
+        </Field>
+        <Field Name="network">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>network</DataField>
+        </Field>
+        <Field Name="rental">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>rental</DataField>
+        </Field>
+        <Field Name="creditcard">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>creditcard</DataField>
+        </Field>
+        <Field Name="scanner">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>scanner</DataField>
+        </Field>
+        <Field Name="refrigerator_count">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>refrigerator_count</DataField>
+        </Field>
+        <Field Name="deepfreezer_count">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>deepfreezer_count</DataField>
+        </Field>
+        <Field Name="cash_register_count">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>cash_register_count</DataField>
+        </Field>
+        <Field Name="size">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>size</DataField>
+        </Field>
+        <Field Name="AH">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>AH</DataField>
+        </Field>
+        <Field Name="AI">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>AI</DataField>
+        </Field>
+        <Field Name="AJ">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>AJ</DataField>
+        </Field>
+        <Field Name="AK">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>AK</DataField>
+        </Field>
+        <Field Name="AL">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>AL</DataField>
+        </Field>
+        <Field Name="AM">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>AM</DataField>
+        </Field>
+        <Field Name="AN">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>AN</DataField>
+        </Field>
+        <Field Name="AO">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>AO</DataField>
+        </Field>
+        <Field Name="AP">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>AP</DataField>
+        </Field>
+        <Field Name="AQ">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>AQ</DataField>
+        </Field>
+        <Field Name="AR">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>AR</DataField>
+        </Field>
+        <Field Name="AS">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>AS</DataField>
+        </Field>
+        <Field Name="AT">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>AT</DataField>
+        </Field>
+        <Field Name="AU">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>AU</DataField>
+        </Field>
+        <Field Name="AV">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>AV</DataField>
+        </Field>
+        <Field Name="AW">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>AW</DataField>
+        </Field>
+        <Field Name="AX">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>AX</DataField>
+        </Field>
+        <Field Name="AY">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>AY</DataField>
+        </Field>
+        <Field Name="id_old">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>id_old</DataField>
+        </Field>
+        <Field Name="sid_id_1">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>sid_id</DataField>
+        </Field>
+        <Field Name="city_1">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>city</DataField>
+        </Field>
+        <Field Name="size2">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>size2</DataField>
+        </Field>
+        <Field Name="expert">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>expert</DataField>
+        </Field>
+        <Field Name="category">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>category</DataField>
+        </Field>
+        <Field Name="network2">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>network2</DataField>
+        </Field>
+        <Field Name="ferrero">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ferrero</DataField>
+        </Field>
+        <Field Name="nielsen">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>nielsen</DataField>
+        </Field>
+        <Field Name="id_1">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>id</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="SalesRep">
+      <Query>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+        <CommandText>select fid, fName from DS_Faces where fid &gt;= 40000 and fid &lt;= 40999 order by fName</CommandText>
+        <DataSourceName>Mobile_Unekt2</DataSourceName>
+      </Query>
+      <Fields>
+        <Field Name="fid">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>fid</DataField>
+        </Field>
+        <Field Name="fName">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>fName</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <Width>157.46033cm</Width>
+  <InteractiveHeight>11in</InteractiveHeight>
+  <Language>en-US</Language>
+  <TopMargin>2.5cm</TopMargin>
+  <PageHeight>29.7cm</PageHeight>
+</Report>

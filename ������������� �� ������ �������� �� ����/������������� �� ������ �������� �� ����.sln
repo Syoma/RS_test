@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "Задолженность по нижней комиссии на дату", "Задолженность по нижней комиссии на дату\Задолженность по нижней комиссии на дату.rptproj", "{2F93EDE5-CD6A-4DE7-B745-CBCD27E505EC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Production|Default = Production|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2F93EDE5-CD6A-4DE7-B745-CBCD27E505EC}.Debug|Default.ActiveCfg = Debug
+		{2F93EDE5-CD6A-4DE7-B745-CBCD27E505EC}.Debug|Default.Build.0 = DebugLocal
+		{2F93EDE5-CD6A-4DE7-B745-CBCD27E505EC}.Debug|Default.Deploy.0 = DebugLocal
+		{2F93EDE5-CD6A-4DE7-B745-CBCD27E505EC}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{2F93EDE5-CD6A-4DE7-B745-CBCD27E505EC}.DebugLocal|Default.Build.0 = DebugLocal
+		{2F93EDE5-CD6A-4DE7-B745-CBCD27E505EC}.Production|Default.ActiveCfg = Production
+		{2F93EDE5-CD6A-4DE7-B745-CBCD27E505EC}.Production|Default.Build.0 = Production
+		{2F93EDE5-CD6A-4DE7-B745-CBCD27E505EC}.Production|Default.Deploy.0 = Production
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

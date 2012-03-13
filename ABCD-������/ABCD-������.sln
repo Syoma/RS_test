@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "ABCD-анализ", "ABCD-анализ\ABCD-анализ.rptproj", "{101EA552-FDAB-4A93-8334-CE8D1BD59BCA}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 2
+		SccProjectName0 = \u0022$/ReportServer/ABCD-анализ\u0022,\u0020CFOBAAAA
+		SccLocalPath0 = .
+		SccProvider0 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		CanCheckoutShared = false
+		SccProjectUniqueName1 = ABCD-анализ\\ABCD-анализ.rptproj
+		SccLocalPath1 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection1 = ABCD-анализ\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Production|Default = Production|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{101EA552-FDAB-4A93-8334-CE8D1BD59BCA}.Debug|Default.ActiveCfg = Debug
+		{101EA552-FDAB-4A93-8334-CE8D1BD59BCA}.Debug|Default.Build.0 = DebugLocal
+		{101EA552-FDAB-4A93-8334-CE8D1BD59BCA}.Debug|Default.Deploy.0 = DebugLocal
+		{101EA552-FDAB-4A93-8334-CE8D1BD59BCA}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{101EA552-FDAB-4A93-8334-CE8D1BD59BCA}.DebugLocal|Default.Build.0 = DebugLocal
+		{101EA552-FDAB-4A93-8334-CE8D1BD59BCA}.Production|Default.ActiveCfg = Production
+		{101EA552-FDAB-4A93-8334-CE8D1BD59BCA}.Production|Default.Build.0 = Production
+		{101EA552-FDAB-4A93-8334-CE8D1BD59BCA}.Production|Default.Deploy.0 = Production
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

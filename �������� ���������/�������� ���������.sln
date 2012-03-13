@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "Перегруз автомашин", "Перегруз автомашин\Перегруз автомашин.rptproj", "{EE75139D-B1F2-4D6D-8139-D58B9D70042C}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 2
+		SccProjectName0 = \u0022$/ReportServer/Перегруз\u0020автомашин\u0022,\u0020PQIBAAAA
+		SccLocalPath0 = .
+		SccProvider0 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		CanCheckoutShared = false
+		SccProjectUniqueName1 = Перегруз\u0020автомашин\\Перегруз\u0020автомашин.rptproj
+		SccLocalPath1 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection1 = Перегруз\u0020автомашин\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Production|Default = Production|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE75139D-B1F2-4D6D-8139-D58B9D70042C}.Debug|Default.ActiveCfg = Debug
+		{EE75139D-B1F2-4D6D-8139-D58B9D70042C}.Debug|Default.Build.0 = DebugLocal
+		{EE75139D-B1F2-4D6D-8139-D58B9D70042C}.Debug|Default.Deploy.0 = DebugLocal
+		{EE75139D-B1F2-4D6D-8139-D58B9D70042C}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{EE75139D-B1F2-4D6D-8139-D58B9D70042C}.DebugLocal|Default.Build.0 = DebugLocal
+		{EE75139D-B1F2-4D6D-8139-D58B9D70042C}.Production|Default.ActiveCfg = Production
+		{EE75139D-B1F2-4D6D-8139-D58B9D70042C}.Production|Default.Build.0 = Production
+		{EE75139D-B1F2-4D6D-8139-D58B9D70042C}.Production|Default.Deploy.0 = Production
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

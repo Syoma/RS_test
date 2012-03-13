@@ -1,0 +1,495 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SemanticModel ID="Gd97f28b2-b740-449a-8823-3766a991b6bf" xmlns="http://schemas.microsoft.com/sqlserver/2004/10/semanticmodeling" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Culture>ru-RU</Culture>
+  <Entities>
+    <Entity ID="G82cae64f-0e41-41fe-9f88-af0d958c3ce8">
+      <Name>Сотрудник</Name>
+      <CollectionName>Сотрудники</CollectionName>
+      <IdentifyingAttributes>
+        <AttributeReference>
+          <!--[Таб. №]-->
+          <AttributeID>Gc4889200-7fe9-488f-a8d2-410fb6f951bc</AttributeID>
+        </AttributeReference>
+      </IdentifyingAttributes>
+      <DefaultDetailAttributes>
+        <AttributeReference>
+          <!--[Примечание]-->
+          <AttributeID>G2173ef00-c18e-484a-a0cb-6d6757c70374</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <!--[Номер паспорта]-->
+          <AttributeID>G73b2d19d-45c3-4032-84bd-e91a55c29c1a</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <!--[Ф.И.О.]-->
+          <AttributeID>G3445c6c5-fc6d-4c31-b315-255ea1245df4</AttributeID>
+        </AttributeReference>
+      </DefaultDetailAttributes>
+      <InstanceSelection>FilteredList</InstanceSelection>
+      <Fields>
+        <Attribute ID="Gc4889200-7fe9-488f-a8d2-410fb6f951bc">
+          <Name>[Таб. №]</Name>
+          <DataType>Integer</DataType>
+          <SortDirection>Descending</SortDirection>
+          <Width>5</Width>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <Column Name="tabnum" />
+        </Attribute>
+        <Attribute ID="G3445c6c5-fc6d-4c31-b315-255ea1245df4">
+          <Name>[Ф.И.О.]</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>32</Width>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <Column Name="fio" />
+        </Attribute>
+        <Attribute ID="Gf697d5f6-ed12-44bf-8aa7-dd2b3e861a62">
+          <Name>[Фамилия]</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>10</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="lname" />
+        </Attribute>
+        <Attribute ID="G5b79b277-8110-4dbc-bcca-9a2a23458112">
+          <Name>[Имя]</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>14</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="fname" />
+        </Attribute>
+        <Attribute ID="G663d4e28-876e-440d-9925-c6029c20ce6b">
+          <Name>[Отчество]</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>11</Width>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <Column Name="mname" />
+        </Attribute>
+        <Attribute ID="G3f809329-1d2f-4320-a1f6-103c6b1a95c3">
+          <Name>[Территория]</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>12</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="terr" />
+        </Attribute>
+        <Attribute ID="Ga14b8e1a-999d-4855-bf5e-a19a98c7d6b0">
+          <Name>[Режим работы]</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>2</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="regime" />
+        </Attribute>
+        <Attribute ID="G00a0ef1b-c7bc-44e6-abbb-14b94c351c39">
+          <Name>[Дирекция]</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>31</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="dir" />
+        </Attribute>
+        <Attribute ID="Ge55e3dfd-b15e-41ac-b0de-6cf87b226ae4">
+          <Name>[Текущее подразделение]</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>35</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="dept" />
+        </Attribute>
+        <Attribute ID="Gf2da40b6-49a9-477c-9787-247babf66f21">
+          <Name>[Текущая должность]</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>29</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="pos" />
+        </Attribute>
+        <Attribute ID="G765b61d1-652d-4cb8-99b8-3df47b2f16de">
+          <Name>[Текущая категория должности]</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>6</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="pos_categ" />
+        </Attribute>
+        <Attribute ID="G3bb00050-3bc1-420b-8a37-6426d8a8f5ab">
+          <Name>[Дата рождения]</Name>
+          <DataType>DateTime</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>10</Width>
+          <Format>dd.mm.yyyy</Format>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <Column Name="birth_date" />
+        </Attribute>
+        <Attribute ID="G486f4226-d3e1-4073-b0c8-4696770092e2">
+          <Name>Место рождения</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <ValueSelection>List</ValueSelection>
+          <Column Name="birth_place" />
+        </Attribute>
+        <Attribute ID="G9286a6ac-7368-4230-9a1d-d43d6d3fb64e">
+          <Name>[№ телефона]</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>33</Width>
+          <ValueSelection>List</ValueSelection>
+          <Column Name="phone" />
+        </Attribute>
+        <Attribute ID="Gd6d73f1d-a321-4581-a34c-82cdfcf85c4c">
+          <Name>[Дата приема]</Name>
+          <DataType>DateTime</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>10</Width>
+          <ValueSelection>List</ValueSelection>
+          <Column Name="begin_white" />
+        </Attribute>
+        <Attribute ID="G050a609c-ba0e-4663-94a3-dbcb8bff9007">
+          <Name>[Образование]</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>13</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="edu_type" />
+        </Attribute>
+        <Attribute ID="G90fe8974-e1d0-48ee-be90-1e920da94ec4">
+          <Name>[Юр.лицо]</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>20</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="jur_name" />
+        </Attribute>
+        <Attribute ID="G4d57917b-e581-4f18-baf6-055580ce3759">
+          <Name>[Серия паспорта]</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>6</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="pass_ser" />
+        </Attribute>
+        <Attribute ID="G73b2d19d-45c3-4032-84bd-e91a55c29c1a">
+          <Name>[Номер паспорта]</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>7</Width>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <Column Name="pass_num" />
+        </Attribute>
+        <Attribute ID="G24d059da-4fa9-405b-8438-5db3ce02e273">
+          <Name>[Кем выдан]</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>52</Width>
+          <ValueSelection>List</ValueSelection>
+          <Column Name="pass_org" />
+        </Attribute>
+        <Attribute ID="Gdf3686bc-c554-48ed-aac2-8f1212311412">
+          <Name>[Дата выдачи паспорта]</Name>
+          <DataType>DateTime</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>10</Width>
+          <ValueSelection>List</ValueSelection>
+          <Column Name="pass_date" />
+        </Attribute>
+        <Attribute ID="G2e408151-b527-4a40-8282-200b01c75da7">
+          <Name>[Пол сотрудника]</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>1</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="sex" />
+        </Attribute>
+        <Attribute ID="G647afe38-c61b-4830-8a9a-fe19c5ae7b4c">
+          <Name>[Город]</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>15</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="city" />
+        </Attribute>
+        <Attribute ID="G7c5daa26-1de4-49e4-acef-826c0af2ff57">
+          <Name>[Адрес регистрации]</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>65</Width>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <Column Name="addr_reg" />
+        </Attribute>
+        <Attribute ID="G5a35fed8-6e94-4730-93fc-1d8113f15f89">
+          <Name>[Адрес проживания]</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>54</Width>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <ValueSelection>List</ValueSelection>
+          <Column Name="addr_fact" />
+        </Attribute>
+        <Attribute ID="G7970ec91-00bb-443c-92fd-f2d8c360f9b1">
+          <Name>[Семейное положение]</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>40</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="fam_status" />
+        </Attribute>
+        <Attribute ID="G8d79cd86-fef1-4da8-8472-85b76891c769">
+          <Name>[Номер пенсионного страхования]</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>15</Width>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <ValueSelection>List</ValueSelection>
+          <Column Name="pens_num" />
+        </Attribute>
+        <Attribute ID="Gaa928dfd-ed00-4dfa-8028-3a374b364fb4">
+          <Name>[ИНН]</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>13</Width>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <ValueSelection>List</ValueSelection>
+          <Column Name="inn" />
+        </Attribute>
+        <Attribute ID="G2468e5ee-4f74-4a1b-9faa-3e35650fb1f6">
+          <Name>[Дата выдачи мед. книжки]</Name>
+          <DataType>DateTime</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>10</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="med_book_date" />
+        </Attribute>
+        <Attribute ID="Gefa16353-d0f1-42e7-b734-968ca97dea33">
+          <Name>[Срок очередной мед. аттестации]</Name>
+          <DataType>DateTime</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>10</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="med_cert_date" />
+        </Attribute>
+        <Attribute ID="G1a90e677-ba9a-41ff-be66-0c9a87456360">
+          <Name>[Договор о мат. ответственности]</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>7</Width>
+          <ValueSelection>List</ValueSelection>
+          <Column Name="mater_doc_num" />
+        </Attribute>
+        <Attribute ID="G2660e9d1-6707-4bc0-9cc2-1918b07bd73b">
+          <Name>[Дата договора о мат. отв.]</Name>
+          <DataType>DateTime</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>10</Width>
+          <ValueSelection>List</ValueSelection>
+          <Column Name="mater_doc_date" />
+        </Attribute>
+        <Attribute ID="Gf22b8c37-be3d-4714-9617-853a1533c3a8">
+          <Name>[Военнообязанный]</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>17</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="mil_status" />
+        </Attribute>
+        <Attribute ID="Gd2d6df6e-b346-4e86-a365-686395893768">
+          <Name>[Воин. состав]</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>14</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="mil_staff" />
+        </Attribute>
+        <Attribute ID="G2173ef00-c18e-484a-a0cb-6d6757c70374">
+          <Name>[Примечание]</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>24</Width>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <EnableDrillthrough>true</EnableDrillthrough>
+          <ContextualName>Merge</ContextualName>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="comments" />
+        </Attribute>
+        <Attribute ID="Gd550412d-98ff-456d-8158-289373fd19fb">
+          <Name>[Общий стаж (дата)]</Name>
+          <DataType>DateTime</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>10</Width>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <ValueSelection>List</ValueSelection>
+          <Column Name="labor_full_start" />
+        </Attribute>
+        <Attribute ID="G87d9d6dc-627f-442e-8207-306025994909">
+          <Name>[Непрерывный стаж (дата)]</Name>
+          <DataType>DateTime</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>10</Width>
+          <ValueSelection>List</ValueSelection>
+          <Column Name="labor_cont_start" />
+        </Attribute>
+        <Attribute ID="Gc5b6d172-9b15-433b-b557-d7b302a61892">
+          <Name>[Наличие фото]</Name>
+          <DataType>Integer</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Descending</SortDirection>
+          <Width>2</Width>
+          <Format>g</Format>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="haspicture" />
+        </Attribute>
+        <Attribute ID="G1528e15f-c230-4614-a54a-5d3266f496ab">
+          <Name>[Водительская категория]</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>4</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="car_classes" />
+        </Attribute>
+        <Attribute ID="G8d6060cd-2190-4a4d-b1a9-faf0504d91e8">
+          <Name>[Мед. справка действительна до]</Name>
+          <DataType>DateTime</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Descending</SortDirection>
+          <Format>d</Format>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="driver_med_date" />
+        </Attribute>
+        <Role ID="G4aa2fbc3-d38c-499e-b9a3-708ec6504e2c">
+          <!--[Сотрудник]-->
+          <RelatedRoleID>G0b501f07-51a4-4be5-b7e8-2c32e10dc991</RelatedRoleID>
+          <Cardinality>One</Cardinality>
+          <Relation Name="em_emp_rel-pers" RelationEnd="Source" />
+        </Role>
+        <Attribute ID="Ge1b7b4f0-3147-4297-9445-2fc5b6620336">
+          <Name>[Транслитерированное имя]</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="tfname" />
+        </Attribute>
+        <Attribute ID="G73cc75bf-a705-41d3-96be-fc0eef648f74">
+          <Name>[Транслитерированная фамилия]</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="tlname" />
+        </Attribute>
+      </Fields>
+      <Table Name="pers2" />
+    </Entity>
+    <Entity ID="G10f3c4c4-df46-4c03-99ac-3035ac5470be">
+      <Name>Контракт</Name>
+      <CollectionName>Контракты</CollectionName>
+      <IdentifyingAttributes>
+        <AttributeReference>
+          <!--[ИД контракта]-->
+          <AttributeID>G034e48a6-4a35-45e6-a656-fb2b2fc14dad</AttributeID>
+        </AttributeReference>
+      </IdentifyingAttributes>
+      <InstanceSelection>FilteredList</InstanceSelection>
+      <Fields>
+        <Attribute ID="G034e48a6-4a35-45e6-a656-fb2b2fc14dad">
+          <Name>[ИД контракта]</Name>
+          <DataType>Integer</DataType>
+          <SortDirection>Descending</SortDirection>
+          <Width>5</Width>
+          <Format>g</Format>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <Column Name="emp_rel_id" />
+        </Attribute>
+        <Role ID="G0b501f07-51a4-4be5-b7e8-2c32e10dc991">
+          <Name>[Сотрудник]</Name>
+          <!--Контракт-->
+          <RelatedRoleID>G4aa2fbc3-d38c-499e-b9a3-708ec6504e2c</RelatedRoleID>
+          <Cardinality>OptionalMany</Cardinality>
+          <Relation Name="em_emp_rel-pers" RelationEnd="Target" />
+        </Role>
+        <Attribute ID="Gc958e602-ad35-4f26-b075-0273ddeb61c5">
+          <Name>[Дата нач.]</Name>
+          <DataType>DateTime</DataType>
+          <SortDirection>Descending</SortDirection>
+          <Format>d</Format>
+          <Column Name="ddateb" />
+        </Attribute>
+        <Attribute ID="Gf1a486cf-45f5-46b8-ae76-5c8496256332">
+          <Name>[Дата кон.]</Name>
+          <DataType>DateTime</DataType>
+          <SortDirection>Descending</SortDirection>
+          <Format>d</Format>
+          <Column Name="ddatee" />
+        </Attribute>
+        <Attribute ID="G646b6a5f-8e84-4ddf-9fed-d99349226caf">
+          <Name>[Тип контракта]</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>11</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="emp_rel_type" />
+        </Attribute>
+        <Attribute ID="G7dde0bd2-24f7-42b8-8ea1-f645bae99736">
+          <Name>[Отдел]</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>35</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="dept" />
+        </Attribute>
+        <Attribute ID="G7d35baa7-4d47-4b0b-844e-90e90f5bad7b">
+          <Name>[Должность]</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>27</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="pos" />
+        </Attribute>
+      </Fields>
+      <Table Name="dbo_em_emp_rel" />
+    </Entity>
+  </Entities>
+</SemanticModel>

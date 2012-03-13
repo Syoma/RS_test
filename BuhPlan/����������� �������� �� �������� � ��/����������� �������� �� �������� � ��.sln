@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "Перемещение наличных из филиалов в ЦО", "Перемещение наличных из филиалов в ЦО\Перемещение наличных из филиалов в ЦО.rptproj", "{532FACFA-55AA-41F4-BBB3-09E37FB833B4}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 2
+		SccProjectName0 = \u0022$/ReportServer/BuhPlan/Перемещение\u0020наличных\u0020из\u0020филиалов\u0020в\u0020ЦО\u0022,\u0020ANMAAAAA
+		SccLocalPath0 = .
+		SccProvider0 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		CanCheckoutShared = false
+		SccProjectUniqueName1 = Перемещение\u0020наличных\u0020из\u0020филиалов\u0020в\u0020ЦО\\Перемещение\u0020наличных\u0020из\u0020филиалов\u0020в\u0020ЦО.rptproj
+		SccLocalPath1 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection1 = Перемещение\u0020наличных\u0020из\u0020филиалов\u0020в\u0020ЦО\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Production|Default = Production|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{532FACFA-55AA-41F4-BBB3-09E37FB833B4}.Debug|Default.ActiveCfg = Debug
+		{532FACFA-55AA-41F4-BBB3-09E37FB833B4}.Debug|Default.Build.0 = Debug
+		{532FACFA-55AA-41F4-BBB3-09E37FB833B4}.Debug|Default.Deploy.0 = Debug
+		{532FACFA-55AA-41F4-BBB3-09E37FB833B4}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{532FACFA-55AA-41F4-BBB3-09E37FB833B4}.DebugLocal|Default.Build.0 = DebugLocal
+		{532FACFA-55AA-41F4-BBB3-09E37FB833B4}.Production|Default.ActiveCfg = Production
+		{532FACFA-55AA-41F4-BBB3-09E37FB833B4}.Production|Default.Build.0 = Production
+		{532FACFA-55AA-41F4-BBB3-09E37FB833B4}.Production|Default.Deploy.0 = Production
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

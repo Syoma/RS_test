@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "Недостающие ГТД", "Недостающие ГТД\Недостающие ГТД.rptproj", "{81DCD8E8-E919-46D4-B8D6-2BB01B525864}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 2
+		SccProjectName0 = \u0022$/ReportServer/Недостающие\u0020ГТД\u0022,\u0020QVDBAAAA
+		SccLocalPath0 = .
+		SccProvider0 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		CanCheckoutShared = false
+		SccProjectUniqueName1 = Недостающие\u0020ГТД\\Недостающие\u0020ГТД.rptproj
+		SccLocalPath1 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection1 = Недостающие\u0020ГТД\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Production|Default = Production|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{81DCD8E8-E919-46D4-B8D6-2BB01B525864}.Debug|Default.ActiveCfg = Debug
+		{81DCD8E8-E919-46D4-B8D6-2BB01B525864}.Debug|Default.Build.0 = DebugLocal
+		{81DCD8E8-E919-46D4-B8D6-2BB01B525864}.Debug|Default.Deploy.0 = DebugLocal
+		{81DCD8E8-E919-46D4-B8D6-2BB01B525864}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{81DCD8E8-E919-46D4-B8D6-2BB01B525864}.DebugLocal|Default.Build.0 = DebugLocal
+		{81DCD8E8-E919-46D4-B8D6-2BB01B525864}.Production|Default.ActiveCfg = Production
+		{81DCD8E8-E919-46D4-B8D6-2BB01B525864}.Production|Default.Build.0 = Production
+		{81DCD8E8-E919-46D4-B8D6-2BB01B525864}.Production|Default.Deploy.0 = Production
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

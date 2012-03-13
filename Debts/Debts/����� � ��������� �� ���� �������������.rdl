@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="Debt_Cube">
+      <DataSourceReference>Debt_Cube</DataSourceReference>
+      <rd:DataSourceID>c4f0a766-5f42-42df-90e9-29020eec0612</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <BottomMargin>2.5cm</BottomMargin>
+  <RightMargin>2.5cm</RightMargin>
+  <PageWidth>21cm</PageWidth>
+  <ReportParameters>
+    <ReportParameter Name="ВремяКалендарь">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>="[Время].[Календарь].[Месяц].&amp;[" + CStr(Year(DateAdd(DateInterval.month,-1,today))*100+Month(DateAdd(DateInterval.month,-1,today))) + "]"</Value>
+          <Value>="[Время].[Календарь].[Месяц].&amp;[" + CStr(Year(Now)*100+Month(Now)) + "]"</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Календарь</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>ВремяКалендарь</DataSetName>
+          <ValueField>ParameterValue</ValueField>
+          <LabelField>ParameterCaptionIndented</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+  </ReportParameters>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>8.5in</InteractiveWidth>
+  <rd:GridSpacing>0.25cm</rd:GridSpacing>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <Body>
+    <ColumnSpacing>1cm</ColumnSpacing>
+    <ReportItems>
+      <Matrix Name="matrix1">
+        <MatrixColumns>
+          <MatrixColumn>
+            <Width>4.25cm</Width>
+          </MatrixColumn>
+        </MatrixColumns>
+        <RowGroupings>
+          <RowGrouping>
+            <Width>6cm</Width>
+            <DynamicRows>
+              <ReportItems>
+                <Textbox Name="Партнер">
+                  <rd:DefaultName>Партнер</rd:DefaultName>
+                  <ZIndex>1</ZIndex>
+                  <Style>
+                    <BorderStyle>
+                      <Default>Solid</Default>
+                    </BorderStyle>
+                    <PaddingLeft>2pt</PaddingLeft>
+                    <PaddingBottom>2pt</PaddingBottom>
+                    <FontFamily>Tahoma</FontFamily>
+                    <BorderColor>
+                      <Default>LightGrey</Default>
+                    </BorderColor>
+                    <PaddingRight>2pt</PaddingRight>
+                    <PaddingTop>2pt</PaddingTop>
+                  </Style>
+                  <CanGrow>true</CanGrow>
+                  <Value>=Fields!Партнер.Value</Value>
+                </Textbox>
+              </ReportItems>
+              <Sorting>
+                <SortBy>
+                  <SortExpression>=Fields!Партнер.Value</SortExpression>
+                  <Direction>Ascending</Direction>
+                </SortBy>
+              </Sorting>
+              <Grouping Name="matrix1_Партнер">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!Партнер.Value</GroupExpression>
+                </GroupExpressions>
+              </Grouping>
+            </DynamicRows>
+          </RowGrouping>
+        </RowGroupings>
+        <ColumnGroupings>
+          <ColumnGrouping>
+            <DynamicColumns>
+              <ReportItems>
+                <Textbox Name="Месяц">
+                  <rd:DefaultName>Месяц</rd:DefaultName>
+                  <ZIndex>2</ZIndex>
+                  <Style>
+                    <BorderStyle>
+                      <Default>Solid</Default>
+                    </BorderStyle>
+                    <TextAlign>Center</TextAlign>
+                    <PaddingLeft>2pt</PaddingLeft>
+                    <PaddingBottom>2pt</PaddingBottom>
+                    <FontFamily>Tahoma</FontFamily>
+                    <FontWeight>700</FontWeight>
+                    <BorderColor>
+                      <Default>LightGrey</Default>
+                    </BorderColor>
+                    <BackgroundColor>#6e9eca</BackgroundColor>
+                    <Color>White</Color>
+                    <PaddingRight>2pt</PaddingRight>
+                    <PaddingTop>2pt</PaddingTop>
+                  </Style>
+                  <CanGrow>true</CanGrow>
+                  <Value>=Fields!Месяц.Value</Value>
+                </Textbox>
+              </ReportItems>
+              <Sorting>
+                <SortBy>
+                  <SortExpression>=Fields!mid.Value</SortExpression>
+                  <Direction>Ascending</Direction>
+                </SortBy>
+              </Sorting>
+              <Grouping Name="matrix1_Месяц">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!Месяц.Value</GroupExpression>
+                </GroupExpressions>
+              </Grouping>
+            </DynamicColumns>
+            <Height>0.625cm</Height>
+          </ColumnGrouping>
+        </ColumnGroupings>
+        <DataSetName>Debt_Cube</DataSetName>
+        <Top>0.25cm</Top>
+        <Width>10.25cm</Width>
+        <Corner>
+          <ReportItems>
+            <Textbox Name="textbox3">
+              <rd:DefaultName>textbox3</rd:DefaultName>
+              <ZIndex>3</ZIndex>
+              <Style>
+                <BorderStyle>
+                  <Default>Solid</Default>
+                </BorderStyle>
+                <TextAlign>Center</TextAlign>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingBottom>2pt</PaddingBottom>
+                <FontFamily>Tahoma</FontFamily>
+                <FontWeight>700</FontWeight>
+                <BorderColor>
+                  <Default>LightGrey</Default>
+                </BorderColor>
+                <BackgroundColor>#6e9eca</BackgroundColor>
+                <Color>White</Color>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+              </Style>
+              <CanGrow>true</CanGrow>
+              <Value>Партнёр</Value>
+            </Textbox>
+          </ReportItems>
+        </Corner>
+        <Height>1.25cm</Height>
+        <MatrixRows>
+          <MatrixRow>
+            <Height>0.625cm</Height>
+            <MatrixCells>
+              <MatrixCell>
+                <ReportItems>
+                  <Textbox Name="textbox2">
+                    <rd:DefaultName>textbox2</rd:DefaultName>
+                    <Style>
+                      <BorderStyle>
+                        <Default>Solid</Default>
+                      </BorderStyle>
+                      <PaddingLeft>2pt</PaddingLeft>
+                      <PaddingBottom>2pt</PaddingBottom>
+                      <FontFamily>Tahoma</FontFamily>
+                      <Format>#,0.0</Format>
+                      <BorderColor>
+                        <Default>LightGrey</Default>
+                      </BorderColor>
+                      <PaddingRight>2pt</PaddingRight>
+                      <PaddingTop>2pt</PaddingTop>
+                    </Style>
+                    <CanGrow>true</CanGrow>
+                    <Value>=Sum(Fields!Сумм.Value)</Value>
+                  </Textbox>
+                </ReportItems>
+              </MatrixCell>
+            </MatrixCells>
+          </MatrixRow>
+        </MatrixRows>
+      </Matrix>
+    </ReportItems>
+    <Height>2cm</Height>
+  </Body>
+  <rd:ReportID>6323b727-6d54-433d-b158-13d9c5e3e35d</rd:ReportID>
+  <LeftMargin>2.5cm</LeftMargin>
+  <DataSets>
+    <DataSet Name="Debt_Cube">
+      <Query>
+        <rd:SuppressAutoUpdate>true</rd:SuppressAutoUpdate>
+        <rd:DesignerState><QueryDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition"><CommandType>MDX</CommandType><QuerySpecification xsi:type="MDXQuerySpecification"><Select><Items><Item><ID xsi:type="Level"><DimensionName>Партнер</DimensionName><HierarchyName>Партнеры</HierarchyName><HierarchyUniqueName>[Партнеры]</HierarchyUniqueName><LevelName>Партнер</LevelName><UniqueName>[Партнеры].[Партнер]</UniqueName></ID><ItemCaption>Партнер</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Level"><DimensionName>Время</DimensionName><HierarchyName>Календарь</HierarchyName><HierarchyUniqueName>[Время].[Календарь]</HierarchyUniqueName><LevelName>Месяц</LevelName><UniqueName>[Время].[Календарь].[Месяц]</UniqueName></ID><ItemCaption>Месяц</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Measure"><MeasureName>Сумм</MeasureName><UniqueName>[Measures].[Сумм]</UniqueName></ID><ItemCaption>Сумм</ItemCaption><BackColor>true</BackColor><ForeColor>true</ForeColor><FontFamily>true</FontFamily><FontSize>true</FontSize><FontWeight>true</FontWeight><FontStyle>true</FontStyle><FontDecoration>true</FontDecoration><FormattedValue>true</FormattedValue><FormatString>true</FormatString></Item><Item><ID xsi:type="Measure"><MeasureName>mid</MeasureName><UniqueName>[Measures].[mid]</UniqueName></ID><ItemCaption>mid</ItemCaption><BackColor>true</BackColor><ForeColor>true</ForeColor><FontFamily>true</FontFamily><FontSize>true</FontSize><FontWeight>true</FontWeight><FontStyle>true</FontStyle><FontDecoration>true</FontDecoration><FormattedValue>true</FormattedValue><FormatString>true</FormatString></Item></Items></Select><From>Задолженность</From><Filter><FilterItems><FilterItem><HierarchyUniqueName>[Подразделение]</HierarchyUniqueName><Condition xsi:type="EqualTo"><Members><Member><MemberUniqueName>[Подразделение].[Торг пред].&amp;[937001]</MemberUniqueName></Member></Members></Condition></FilterItem><FilterItem><HierarchyUniqueName>[Время].[Календарь]</HierarchyUniqueName><Condition xsi:type="EqualTo"><Members><Member><MemberUniqueName>[Время].[Календарь].[Месяц].&amp;[200705]</MemberUniqueName></Member><Member><MemberUniqueName>[Время].[Календарь].[Месяц].&amp;[200706]</MemberUniqueName></Member></Members><Parametrized>true</Parametrized></Condition></FilterItem></FilterItems></Filter><Calculations><Calculation><ID>[Сумм]</ID><Name>Сумм</Name><ParentUniqueName>[Measures]</ParentUniqueName><Expression>0.01 * sum(                        
+          
+            descendants([Валюта].currentmember,[Валюта].[Валюта]),     
+                      
+            -1 * sum(  descendants( [Время].[Календарь].currentmember,                    
+                                    [Время].[Календарь].[День]   
+                                  ),                    
+                       ( [Measures].[debtval], [Вид задолженности].[Сальдо])  /      
+                         count( descendants( [Время].[Календарь].currentmember.parent, [Время].[Календарь].[День])   
+                       )      
+                    )  *   ( [Время].[Календарь].currentmember.lastchild, [cratio],         
+                              [Подразделение].DEFAULTMEMBER, [Вид задолженности].DEFAULTMEMBER   
+                            )  /      
+                                ( [Время].[Календарь].currentmember.lastchild, [Валюта].&amp;[0],[cratio],    
+                                  [Подразделение].DEFAULTMEMBER, [Вид задолженности].DEFAULTMEMBER   
+                                )   
+          )</Expression></Calculation><Calculation><ID>[mid]</ID><Name>mid</Name><ParentUniqueName>[Measures]</ParentUniqueName><Expression>iif([Measures].[Сумм]&gt;0, [Время].[Календарь].currentmember.properties("id"), null)</Expression></Calculation></Calculations><Aggregates /><QueryProperties /></QuerySpecification><Query><Statement>WITH MEMBER [Measures].[Сумм] AS '0.01 * sum(                        
+          
+            descendants([Валюта].currentmember,[Валюта].[Валюта]),     
+                      
+            -1 * sum(  descendants( [Время].[Календарь].currentmember,                    
+                                    [Время].[Календарь].[День]   
+                                  ),                    
+                       ( [Measures].[debtval], [Вид задолженности].[Сальдо])  /      
+                         count( descendants( [Время].[Календарь].currentmember.parent, [Время].[Календарь].[День])   
+                       )      
+                    )  *   ( [Время].[Календарь].currentmember.lastchild, [cratio],         
+                              [Подразделение].DEFAULTMEMBER, [Вид задолженности].DEFAULTMEMBER   
+                            )  /      
+                                ( [Время].[Календарь].currentmember.lastchild, [Валюта].&amp;[0],[cratio],    
+                                  [Подразделение].DEFAULTMEMBER, [Вид задолженности].DEFAULTMEMBER   
+                                )   
+          )' MEMBER [Measures].[mid] AS 'iif([Measures].[Сумм]&gt;0, [Время].[Календарь].currentmember.properties("id"), null)' SELECT NON EMPTY { [Measures].[Сумм], [Measures].[mid] } ON COLUMNS, NON EMPTY { ([Партнеры].[Партнер].ALLMEMBERS * [Время].[Календарь].[Месяц].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( STRTOSET(@[ВремяКалендарь], CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Подразделение].[Торг пред].&amp;[937001] } ) ON COLUMNS FROM [Задолженность])) WHERE ( [Подразделение].[Торг пред].&amp;[937001] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</Statement><ParameterDefinitions><ParameterDefinition><Name>ВремяКалендарь</Name><DefaultValues><DefaultValue>[Время].[Календарь].[Месяц].&amp;[200705]</DefaultValue><DefaultValue>[Время].[Календарь].[Месяц].&amp;[200706]</DefaultValue></DefaultValues><Caption>Календарь</Caption><HierarchyUniqueName>[Время].[Календарь]</HierarchyUniqueName><ParameterValuesQuery><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Время].[Календарь].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Время].[Календарь].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Время].[Календарь].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Время].[Календарь].ALLMEMBERS ON ROWS FROM ( SELECT ( { [Подразделение].[Торг пред].&amp;[937001] } ) ON COLUMNS FROM [Задолженность])</Statement><ParameterizedStatement><ReferencedParameters /></ParameterizedStatement></ParameterValuesQuery><MultipleValues>true</MultipleValues></ParameterDefinition></ParameterDefinitions></Query></QueryDefinition></rd:DesignerState>
+        <CommandText>WITH MEMBER [Measures].[Сумм] AS '0.01 * sum(                        
+          
+            descendants([Валюта].currentmember,[Валюта].[Валюта]),     
+                      
+            -1 * sum(  descendants( [Время].[Календарь].currentmember,                    
+                                    [Время].[Календарь].[День]   
+                                  ),                    
+                       ( [Measures].[debtval], [Вид задолженности].[Сальдо])  /      
+                         count( descendants( [Время].[Календарь].currentmember.parent, [Время].[Календарь].[День])   
+                       )      
+                    )  *   ( [Время].[Календарь].currentmember.lastchild, [cratio],         
+                              [Подразделение].DEFAULTMEMBER, [Вид задолженности].DEFAULTMEMBER   
+                            )  /      
+                                ( [Время].[Календарь].currentmember.lastchild, [Валюта].&amp;[0],[cratio],    
+                                  [Подразделение].DEFAULTMEMBER, [Вид задолженности].DEFAULTMEMBER   
+                                )   
+          )' MEMBER [Measures].[mid] AS 'iif([Measures].[Сумм]&gt;0, [Время].[Календарь].currentmember.properties("id"), null)' SELECT NON EMPTY { [Measures].[Сумм], [Measures].[mid] } ON COLUMNS, NON EMPTY { ([Партнеры].[Партнер].ALLMEMBERS * [Время].[Календарь].[Месяц].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( STRTOSET(@[ВремяКалендарь], CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Подразделение].[Торг пред].&amp;[937001] } ) ON COLUMNS FROM [Задолженность])) WHERE ( [Подразделение].[Торг пред].&amp;[937001] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="ВремяКалендарь">
+            <Value>=Parameters!ВремяКалендарь.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <DataSourceName>Debt_Cube</DataSourceName>
+      </Query>
+      <Fields>
+        <Field Name="Партнер">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Партнеры].[Партнер]" /&gt;</DataField>
+        </Field>
+        <Field Name="Месяц">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Время].[Календарь].[Месяц]" /&gt;</DataField>
+        </Field>
+        <Field Name="Сумм">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Сумм]" /&gt;</DataField>
+        </Field>
+        <Field Name="mid">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[mid]" /&gt;</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="ВремяКалендарь">
+      <Query>
+        <rd:DesignerState>
+          <QueryDefinition xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
+            <CommandType>MDX</CommandType>
+            <Type>Query</Type>
+            <QuerySpecification xsi:type="MDXQuerySpecification">
+              <Select>
+                <Items />
+              </Select>
+              <From>Задолженность</From>
+            </QuerySpecification>
+            <Query>
+              <Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Время].[Календарь].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Время].[Календарь].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Время].[Календарь].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Время].[Календарь].ALLMEMBERS ON ROWS FROM ( SELECT ( { [Подразделение].[Торг пред].&amp;[937001] } ) ON COLUMNS FROM [Задолженность])</Statement>
+            </Query>
+          </QueryDefinition>
+        </rd:DesignerState>
+        <CommandText>WITH MEMBER [Measures].[ParameterCaption] AS '[Время].[Календарь].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Время].[Календарь].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Время].[Календарь].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Время].[Календарь].ALLMEMBERS ON ROWS FROM ( SELECT ( { [Подразделение].[Торг пред].&amp;[937001] } ) ON COLUMNS FROM [Задолженность])</CommandText>
+        <DataSourceName>Debt_Cube</DataSourceName>
+        <rd:AutoGenerated>true</rd:AutoGenerated>
+        <rd:Hidden>true</rd:Hidden>
+      </Query>
+      <Fields>
+        <Field Name="ParameterValue">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Measure" UniqueName="[Measures].[ParameterValue]" /&gt;</DataField>
+        </Field>
+        <Field Name="ParameterCaption">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Measure" UniqueName="[Measures].[ParameterCaption]" /&gt;</DataField>
+        </Field>
+        <Field Name="ParameterCaptionIndented">
+          <Value>=Space(3*Fields!ParameterLevel.Value) + Fields!ParameterCaption.Value</Value>
+        </Field>
+        <Field Name="ParameterLevel">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Measure" UniqueName="[Measures].[ParameterLevel]" /&gt;</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <Width>12.69841cm</Width>
+  <InteractiveHeight>11in</InteractiveHeight>
+  <Language>en-US</Language>
+  <TopMargin>2.5cm</TopMargin>
+  <PageHeight>29.7cm</PageHeight>
+</Report>

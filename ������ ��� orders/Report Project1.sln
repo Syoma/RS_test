@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "Report Project1", "Report Project1\Report Project1.rptproj", "{865BC69D-5A36-4A25-83EB-7CF8C56A6728}"
+EndProject
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "Report Project2", "Report Project2\Report Project2.rptproj", "{69B19382-319E-4FCD-ADA5-C669BE0A5889}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 3
+		SccProjectName0 = \u0022$/ReportServer/Товары\u0020для\u0020orders\u0022,\u0020ROBBAAAA
+		SccLocalPath0 = .
+		SccProvider0 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		CanCheckoutShared = false
+		SccProjectUniqueName1 = Report\u0020Project1\\Report\u0020Project1.rptproj
+		SccLocalPath1 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection1 = Report\u0020Project1\\
+		SccProjectUniqueName2 = Report\u0020Project2\\Report\u0020Project2.rptproj
+		SccLocalPath2 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection2 = Report\u0020Project2\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Production|Default = Production|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{865BC69D-5A36-4A25-83EB-7CF8C56A6728}.Debug|Default.ActiveCfg = Debug
+		{865BC69D-5A36-4A25-83EB-7CF8C56A6728}.Debug|Default.Build.0 = DebugLocal
+		{865BC69D-5A36-4A25-83EB-7CF8C56A6728}.Debug|Default.Deploy.0 = DebugLocal
+		{865BC69D-5A36-4A25-83EB-7CF8C56A6728}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{865BC69D-5A36-4A25-83EB-7CF8C56A6728}.DebugLocal|Default.Build.0 = DebugLocal
+		{865BC69D-5A36-4A25-83EB-7CF8C56A6728}.Production|Default.ActiveCfg = Production
+		{865BC69D-5A36-4A25-83EB-7CF8C56A6728}.Production|Default.Build.0 = Production
+		{865BC69D-5A36-4A25-83EB-7CF8C56A6728}.Production|Default.Deploy.0 = Production
+		{69B19382-319E-4FCD-ADA5-C669BE0A5889}.Debug|Default.ActiveCfg = DebugLocal
+		{69B19382-319E-4FCD-ADA5-C669BE0A5889}.Debug|Default.Build.0 = DebugLocal
+		{69B19382-319E-4FCD-ADA5-C669BE0A5889}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{69B19382-319E-4FCD-ADA5-C669BE0A5889}.DebugLocal|Default.Build.0 = DebugLocal
+		{69B19382-319E-4FCD-ADA5-C669BE0A5889}.Production|Default.ActiveCfg = Production
+		{69B19382-319E-4FCD-ADA5-C669BE0A5889}.Production|Default.Build.0 = Production
+		{69B19382-319E-4FCD-ADA5-C669BE0A5889}.Production|Default.Deploy.0 = Production
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

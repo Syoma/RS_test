@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <State>$base64$PFNvdXJjZUNvbnRyb2xJbmZvIHhtbG5zOnhzZD0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zOmRkbDI9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDAzL2VuZ2luZS8yIiB4bWxuczpkZGwyXzI9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDAzL2VuZ2luZS8yLzIiIHhtbG5zOmR3ZD0iaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS9EYXRhV2FyZWhvdXNlL0Rlc2lnbmVyLzEuMCI+DQogIDxFbmFibGVkPnRydWU8L0VuYWJsZWQ+DQogIDxQcm9qZWN0TmFtZT4iJC9SZXBvcnRTZXJ2ZXIv0J/RgNC10LTQvtC/0LvQsNGH0LXQvdC90YvQtSDQutCw0YDRgtGLINCe0LrQtdCw0L0iLCBWSk9CQUFBQTwvUHJvamVjdE5hbWU+DQogIDxBdXhQYXRoPjwvQXV4UGF0aD4NCiAgPExvY2FsUGF0aD4uLjwvTG9jYWxQYXRoPg0KICA8UHJvdmlkZXI+TVNTQ0NJOk1pY3Jvc29mdCBWaXN1YWwgU291cmNlU2FmZTwvUHJvdmlkZXI+DQo8L1NvdXJjZUNvbnRyb2xJbmZvPg==</State>
+  <DataSources />
+  <Reports>
+    <ProjectItem>
+      <Name>Cводный реестр о принятых распоряжениях на переводы.rdl</Name>
+      <FullPath>Cводный реестр о принятых распоряжениях на переводы.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Реестр неиспользованных карт.rdl</Name>
+      <FullPath>Реестр неиспользованных карт.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Реестр сводный ежедневный.rdl</Name>
+      <FullPath>Реестр сводный ежедневный.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Свод за период.rdl</Name>
+      <FullPath>Свод за период.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Реестр принятых взносов детальный по БПА.rdl</Name>
+      <FullPath>Реестр принятых взносов детальный по БПА.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Реестр принятых распоряжений детальный.rdl</Name>
+      <FullPath>Реестр принятых распоряжений детальный.rdl</FullPath>
+    </ProjectItem>
+  </Reports>
+  <Configurations>
+    <Configuration>
+      <Name>Debug</Name>
+      <Platform>Win32</Platform>
+      <Options>
+        <TargetFolder>Предоплаченные карты Океан</TargetFolder>
+        <TargetDataSourceFolder>Data Sources</TargetDataSourceFolder>
+      </Options>
+    </Configuration>
+    <Configuration>
+      <Name>DebugLocal</Name>
+      <Platform>Win32</Platform>
+      <Options>
+        <TargetFolder>Предоплаченные карты Океан</TargetFolder>
+        <TargetDataSourceFolder>Data Sources</TargetDataSourceFolder>
+      </Options>
+    </Configuration>
+    <Configuration>
+      <Name>Production</Name>
+      <Platform>Win32</Platform>
+      <Options>
+        <TargetFolder>Предоплаченные карты Океан</TargetFolder>
+        <TargetDataSourceFolder>Data Sources</TargetDataSourceFolder>
+      </Options>
+    </Configuration>
+  </Configurations>
+</Project>

@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "Бухгалтерия", "Бухгалтерия.rptproj", "{FCA5FEF4-2624-4489-801C-651F2936B8D8}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 2
+		SccLocalPath0 = .
+		CanCheckoutShared = false
+		SccProjectUniqueName1 = Бухгалтерия.rptproj
+		SccLocalPath1 = .
+		CanCheckoutShared = false
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Production|Default = Production|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FCA5FEF4-2624-4489-801C-651F2936B8D8}.Debug|Default.ActiveCfg = Debug
+		{FCA5FEF4-2624-4489-801C-651F2936B8D8}.Debug|Default.Build.0 = DebugLocal
+		{FCA5FEF4-2624-4489-801C-651F2936B8D8}.Debug|Default.Deploy.0 = DebugLocal
+		{FCA5FEF4-2624-4489-801C-651F2936B8D8}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{FCA5FEF4-2624-4489-801C-651F2936B8D8}.DebugLocal|Default.Build.0 = DebugLocal
+		{FCA5FEF4-2624-4489-801C-651F2936B8D8}.Production|Default.ActiveCfg = Production
+		{FCA5FEF4-2624-4489-801C-651F2936B8D8}.Production|Default.Build.0 = Production
+		{FCA5FEF4-2624-4489-801C-651F2936B8D8}.Production|Default.Deploy.0 = Production
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

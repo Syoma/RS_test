@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "Оплаты поставщикам", "Оплаты поставщикам\Оплаты поставщикам.rptproj", "{0FE1CD9A-9FB5-4BEA-9BC1-1D143C11E1CE}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 2
+		SccProjectName0 = \u0022$/ReportServer/Оплаты\u0020поставщикам\u0022,\u0020WAHBAAAA
+		SccLocalPath0 = ..
+		SccProvider0 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection0 = Оплаты\u0020поставщикам\\
+		SccProjectUniqueName1 = Оплаты\u0020поставщикам\\Оплаты\u0020поставщикам.rptproj
+		SccLocalPath1 = ..
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection1 = Оплаты\u0020поставщикам\\Оплаты\u0020поставщикам\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Production|Default = Production|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0FE1CD9A-9FB5-4BEA-9BC1-1D143C11E1CE}.Debug|Default.ActiveCfg = Debug
+		{0FE1CD9A-9FB5-4BEA-9BC1-1D143C11E1CE}.Debug|Default.Build.0 = DebugLocal
+		{0FE1CD9A-9FB5-4BEA-9BC1-1D143C11E1CE}.Debug|Default.Deploy.0 = DebugLocal
+		{0FE1CD9A-9FB5-4BEA-9BC1-1D143C11E1CE}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{0FE1CD9A-9FB5-4BEA-9BC1-1D143C11E1CE}.DebugLocal|Default.Build.0 = DebugLocal
+		{0FE1CD9A-9FB5-4BEA-9BC1-1D143C11E1CE}.Production|Default.ActiveCfg = Production
+		{0FE1CD9A-9FB5-4BEA-9BC1-1D143C11E1CE}.Production|Default.Build.0 = Production
+		{0FE1CD9A-9FB5-4BEA-9BC1-1D143C11E1CE}.Production|Default.Deploy.0 = Production
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
