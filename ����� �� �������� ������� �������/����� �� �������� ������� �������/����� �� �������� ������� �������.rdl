@@ -73,7 +73,7 @@
           <Language>ru-RU</Language>
         </Style>
         <CanGrow>true</CanGrow>
-        <Value>=Globals!ReportName</Value>
+        <Value>=Globals!ReportName </Value>
       </Textbox>
     </ReportItems>
     <Height>0.375in</Height>
