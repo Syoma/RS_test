@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Name>procedure</Name>
-  <DataSourceID>e873af96-649d-47f4-ba4a-8ec3409db494</DataSourceID>
-  <ConnectionProperties>
-    <Extension>ODBC</Extension>
-    <ConnectString>Dsn=RC_UNACT_OLD_11</ConnectString>
-  </ConnectionProperties>
-</RptDataSource>
