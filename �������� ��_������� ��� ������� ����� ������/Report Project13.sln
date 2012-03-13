@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "Report Project13", "Report Project13\Report Project13.rptproj", "{9A637908-41D9-41A6-AFD9-BFB0262F067D}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 2
+		SccProjectName0 = \u0022$/ReportServer/Партнеры\u0020Пл_Дмитров\u0020без\u0020наборов\u0020прайс\u0020листов\u0022,\u0020DXCBAAAA
+		SccLocalPath0 = .
+		SccProvider0 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		CanCheckoutShared = false
+		SccProjectUniqueName1 = Report\u0020Project13\\Report\u0020Project13.rptproj
+		SccLocalPath1 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection1 = Report\u0020Project13\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Production|Default = Production|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9A637908-41D9-41A6-AFD9-BFB0262F067D}.Debug|Default.ActiveCfg = Debug
+		{9A637908-41D9-41A6-AFD9-BFB0262F067D}.Debug|Default.Build.0 = DebugLocal
+		{9A637908-41D9-41A6-AFD9-BFB0262F067D}.Debug|Default.Deploy.0 = DebugLocal
+		{9A637908-41D9-41A6-AFD9-BFB0262F067D}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{9A637908-41D9-41A6-AFD9-BFB0262F067D}.DebugLocal|Default.Build.0 = DebugLocal
+		{9A637908-41D9-41A6-AFD9-BFB0262F067D}.Production|Default.ActiveCfg = Production
+		{9A637908-41D9-41A6-AFD9-BFB0262F067D}.Production|Default.Build.0 = Production
+		{9A637908-41D9-41A6-AFD9-BFB0262F067D}.Production|Default.Deploy.0 = Production
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

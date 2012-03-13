@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "Остатки по акциям", "Остатки по акциям\Остатки по акциям.rptproj", "{45E9A9D9-6EAA-4094-B512-E549B592853C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Production|Default = Production|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{45E9A9D9-6EAA-4094-B512-E549B592853C}.Debug|Default.ActiveCfg = Debug
+		{45E9A9D9-6EAA-4094-B512-E549B592853C}.Debug|Default.Build.0 = DebugLocal
+		{45E9A9D9-6EAA-4094-B512-E549B592853C}.Debug|Default.Deploy.0 = DebugLocal
+		{45E9A9D9-6EAA-4094-B512-E549B592853C}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{45E9A9D9-6EAA-4094-B512-E549B592853C}.DebugLocal|Default.Build.0 = DebugLocal
+		{45E9A9D9-6EAA-4094-B512-E549B592853C}.Production|Default.ActiveCfg = Production
+		{45E9A9D9-6EAA-4094-B512-E549B592853C}.Production|Default.Build.0 = Production
+		{45E9A9D9-6EAA-4094-B512-E549B592853C}.Production|Default.Deploy.0 = Production
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

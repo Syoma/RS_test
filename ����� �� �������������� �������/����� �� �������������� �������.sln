@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "Отчет по резервированию товаров", "Отчет по резервированию товаров\Отчет по резервированию товаров.rptproj", "{AB7DA421-EEFC-4D62-99E0-F3ABDC259FC6}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 2
+		SccProjectName0 = \u0022$/ReportServer/Отчет\u0020по\u0020резервированию\u0020товаров\u0022,\u0020XLIBAAAA
+		SccLocalPath0 = .
+		SccProvider0 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		CanCheckoutShared = false
+		SccProjectUniqueName1 = Отчет\u0020по\u0020резервированию\u0020товаров\\Отчет\u0020по\u0020резервированию\u0020товаров.rptproj
+		SccLocalPath1 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection1 = Отчет\u0020по\u0020резервированию\u0020товаров\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Production|Default = Production|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AB7DA421-EEFC-4D62-99E0-F3ABDC259FC6}.Debug|Default.ActiveCfg = Debug
+		{AB7DA421-EEFC-4D62-99E0-F3ABDC259FC6}.Debug|Default.Build.0 = DebugLocal
+		{AB7DA421-EEFC-4D62-99E0-F3ABDC259FC6}.Debug|Default.Deploy.0 = DebugLocal
+		{AB7DA421-EEFC-4D62-99E0-F3ABDC259FC6}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{AB7DA421-EEFC-4D62-99E0-F3ABDC259FC6}.DebugLocal|Default.Build.0 = DebugLocal
+		{AB7DA421-EEFC-4D62-99E0-F3ABDC259FC6}.Production|Default.ActiveCfg = Production
+		{AB7DA421-EEFC-4D62-99E0-F3ABDC259FC6}.Production|Default.Build.0 = Production
+		{AB7DA421-EEFC-4D62-99E0-F3ABDC259FC6}.Production|Default.Deploy.0 = Production
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

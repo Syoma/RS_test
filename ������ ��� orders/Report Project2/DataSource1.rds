@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>DataSource1</Name>
+  <DataSourceID>44b8a59d-159e-4558-a99c-9e0bf419be0a</DataSourceID>
+  <ConnectionProperties>
+    <Extension>ODBC</Extension>
+    <ConnectString>Dsn=uncat;userid=mg;databasename=rc_unact;servername=UNCAT;autostop=YES;integrated=NO;encryptedpassword=2cefd91b28cedf;debug=NO;disablemultirowfetch=NO;commlinks='TCPIPhost=asa0.unact.ru;dobroadcast=no';compress=NO;suppresswarnings=NO</ConnectString>
+    <IntegratedSecurity>true</IntegratedSecurity>
+  </ConnectionProperties>
+</RptDataSource>

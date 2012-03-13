@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="DataSource1">
+      <rd:DataSourceID>d8a70e33-0314-4e71-90af-47fa4a0884d6</rd:DataSourceID>
+      <DataSourceReference>DataSource1</DataSourceReference>
+    </DataSource>
+  </DataSources>
+  <InteractiveHeight>11in</InteractiveHeight>
+  <ReportParameters>
+    <ReportParameter Name="ptime1">
+      <DataType>DateTime</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Начало периода</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ptime2">
+      <DataType>DateTime</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Конец периода</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>8.5in</InteractiveWidth>
+  <rd:GridSpacing>0.25cm</rd:GridSpacing>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <RightMargin>2.5cm</RightMargin>
+  <LeftMargin>2.5cm</LeftMargin>
+  <BottomMargin>2.5cm</BottomMargin>
+  <rd:ReportID>9765e373-7505-480a-b2fb-665bfb87ba5e</rd:ReportID>
+  <PageWidth>21cm</PageWidth>
+  <DataSets>
+    <DataSet Name="DataSource1">
+      <Fields>
+        <Field Name="ag">
+          <DataField>ag</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ID">
+          <DataField />
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource1</DataSourceName>
+        <CommandText>create table #v1
+(time datetime,
+ev varchar (255),
+ag varchar (255),
+id int)
+insert into #v1 (time, ev, ag, id)
+select CONVERT(DATETIME, CONVERT(CHAR(19), time, 121)), event, agent, row_number() over (order by agent, time) from dbo.queue_log
+where event ='addmember' and agent in (select distinct agent from dbo.queue_log where queuename='support_pps' and agent not in (select distinct agent from dbo.queue_log where queuename='it-support' or queuename='support_SUB_line2'  or queuename='support_SUB')) and CONVERT(DATE, CONVERT(CHAR(19), time)) between @ptime1 and @ptime2
+order by agent, CONVERT(DATETIME, CONVERT(CHAR(19), time, 121))
+
+create table #v2  
+(time datetime,
+id1 int,
+ev1 varchar (255))
+insert into #v2 (time, id1, ev1)
+select CONVERT(DATETIME, CONVERT(CHAR(19), time, 121)), row_number() over (order by agent,time), event from dbo.queue_log
+where event ='removemember' and agent in (select distinct agent from dbo.queue_log where queuename='support_pps' and agent not in (select distinct agent from dbo.queue_log where queuename='it-support' or queuename='support_SUB_line2' or queuename='support_SUB')) and CONVERT(DATE, CONVERT(CHAR(19), time)) between @ptime1 and @ptime2
+order by agent, CONVERT(DATETIME, CONVERT(CHAR(19), time, 121))
+
+create table #v3
+(ev varchar (255),
+ag varchar (255),
+tn datetime, 
+ev1 varchar (255),
+tk datetime)
+insert into #v3 (ev, ag, tn, ev1, tk)
+select #v1.ev, #v1.ag, #v1.time, #v2.ev1, #v2.time from #v1, #v2
+where #v1.id=#v2.id1 and CONVERT(DATETIME, CONVERT(CHAR(10), #v1.time, 121)) =CONVERT(DATETIME, CONVERT(CHAR(10), #v2.time, 121))
+
+create table #v4
+(time datetime,
+ev varchar (255),
+ag varchar (255),
+id varchar (255))
+insert into #v4 (time, ev, ag, id)
+select CONVERT(DATETIME, CONVERT(CHAR(19), time, 121)), event, agent, callid from dbo.queue_log
+where event ='connect' and agent in (select distinct agent from dbo.queue_log where queuename='support_pps' and agent not in (select distinct agent from dbo.queue_log where queuename='it-support' or queuename='support_SUB_line2' or queuename='support_SUB')) and CONVERT(DATE, CONVERT(CHAR(19),  time)) between @ptime1 and @ptime2
+order by agent, CONVERT(DATETIME, CONVERT(CHAR(19), time, 121))
+
+create table #v5 
+(time datetime,
+id1 varchar(255))
+insert into #v5 (time, id1)
+select CONVERT(DATETIME, CONVERT(CHAR(19), time, 121)), callid from dbo.queue_log
+where event in ('completeagent','completecaller') and agent in (select distinct agent from dbo.queue_log where queuename='support_pps' and agent not in (select distinct agent from dbo.queue_log where queuename='it-support' or queuename='support_SUB_line2' or queuename='support_SUB')) and CONVERT(DATE, CONVERT(CHAR(19), time)) between @ptime1 and @ptime2
+order by agent, CONVERT(DATETIME, CONVERT(CHAR(19), time, 121))
+
+create table #v6
+(ev varchar (255),
+ag varchar (255),
+tn datetime,
+tk datetime)
+insert into #v6 (ev, ag, tn, tk)
+select #v4.ev, #v4.ag, #v4.time, #v5.time from #v4, #v5
+where #v4.id=#v5.id1
+
+create table #v7
+(ag varchar (255),
+tdnd datetime)
+insert into #v7 (ag, tdnd)
+select  distinct #v3.ag, convert (DATETIME, CONVERT(CHAR(19), dbo.queue_log.time, 121)) from dbo.queue_log, #v3
+where event='ringnoanswer' and queuename='support_PPS' and CONVERT(DATE, CONVERT(CHAR(19), time)) between @ptime1 and @ptime2
+and CONVERT(DATETIME, CONVERT(CHAR(19), dbo.queue_log.time, 121)) between #v3.tn and #v3.tk
+except (select  distinct #v6.ag, convert (DATETIME, CONVERT(CHAR(19), dbo.queue_log.time, 121)) from dbo.queue_log, #v6
+where event='ringnoanswer' and queuename='support_PPS' and CONVERT(DATE, CONVERT(CHAR(19), time)) between @ptime1 and @ptime2
+and (CONVERT(DATETIME, CONVERT(CHAR(19), dbo.queue_log.time, 121)) between #v6.tn and #v6.tk)
+)
+create table #v8
+(ag varchar (255),
+tdnd datetime,
+id int)
+insert into #v8 (ag, tdnd, id)
+select ag, tdnd, row_number() over (order by ag, tdnd)from #v7
+
+create table #v9
+(ag varchar (255), 
+tdnd datetime)
+insert into #v9 (ag, tdnd) select a.ag, a.tdnd from #v8 a,#v8 b, #v8 e
+where a.id=b.id+1 and a.id=e.id-1 and DATEDIFF(second,b.tdnd, a.tdnd)&lt;30 and DATEDIFF(second,a.tdnd, e.tdnd)&lt;30 and a.ag=b.ag and a.ag=e.ag
+
+
+select ag, cast (count(tdnd)*5.5/60 as decimal (10, 2) ) from #v9
+group by ag</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="@ptime1">
+            <Value>=Parameters!ptime1.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@ptime2">
+            <Value>=Parameters!ptime2.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+    </DataSet>
+  </DataSets>
+  <Width>30.25cm</Width>
+  <Body>
+    <ColumnSpacing>1cm</ColumnSpacing>
+    <ReportItems>
+      <Textbox Name="textbox5">
+        <rd:DefaultName>textbox5</rd:DefaultName>
+        <Width>13.25397cm</Width>
+        <Style>
+          <FontSize>16pt</FontSize>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>1</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>3.75cm</Left>
+        <Height>2.01058cm</Height>
+        <Value>Ориентировочное количество времени нахождения оператора в статусе DND в момент наличия очереди.</Value>
+      </Textbox>
+      <Table Name="table1">
+        <DataSetName>DataSource1</DataSetName>
+        <Top>2.5cm</Top>
+        <Width>8.5cm</Width>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox3">
+                      <rd:DefaultName>textbox3</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>1</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!ag.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox4">
+                      <rd:DefaultName>textbox4</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!ID.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.75cm</Height>
+            </TableRow>
+          </TableRows>
+        </Details>
+        <Header>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox1">
+                      <rd:DefaultName>textbox1</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>5</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Оператор</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox2">
+                      <rd:DefaultName>textbox2</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>4</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Время, в мин.</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.75cm</Height>
+            </TableRow>
+          </TableRows>
+        </Header>
+        <TableColumns>
+          <TableColumn>
+            <Width>5cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>3.5cm</Width>
+          </TableColumn>
+        </TableColumns>
+        <Height>3.0873cm</Height>
+        <Footer>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox7">
+                      <rd:DefaultName>textbox7</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Top>Black</Top>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Top>Solid</Top>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Top>1pt</Top>
+                        </BorderWidth>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>3</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox8">
+                      <rd:DefaultName>textbox8</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Top>Black</Top>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Top>Solid</Top>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Top>1pt</Top>
+                        </BorderWidth>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>2</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>1.5873cm</Height>
+            </TableRow>
+          </TableRows>
+        </Footer>
+        <Left>5.75cm</Left>
+      </Table>
+    </ReportItems>
+    <Height>14.86905cm</Height>
+  </Body>
+  <Language>en-US</Language>
+  <TopMargin>2.5cm</TopMargin>
+  <PageHeight>29.7cm</PageHeight>
+</Report>

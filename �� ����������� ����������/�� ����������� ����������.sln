@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "Не проведенные инкассации", "Не проведенные инкассации\Не проведенные инкассации.rptproj", "{B9957BDE-8557-4841-BC95-017F91BEBA26}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 2
+		SccProjectName0 = \u0022$/ReportServer/Не\u0020проведенные\u0020инкассации\u0022,\u0020LFSBAAAA
+		SccLocalPath0 = .
+		SccProvider0 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		CanCheckoutShared = false
+		SccProjectUniqueName1 = Не\u0020проведенные\u0020инкассации\\Не\u0020проведенные\u0020инкассации.rptproj
+		SccLocalPath1 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection1 = Не\u0020проведенные\u0020инкассации\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Production|Default = Production|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B9957BDE-8557-4841-BC95-017F91BEBA26}.Debug|Default.ActiveCfg = Debug
+		{B9957BDE-8557-4841-BC95-017F91BEBA26}.Debug|Default.Build.0 = DebugLocal
+		{B9957BDE-8557-4841-BC95-017F91BEBA26}.Debug|Default.Deploy.0 = DebugLocal
+		{B9957BDE-8557-4841-BC95-017F91BEBA26}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{B9957BDE-8557-4841-BC95-017F91BEBA26}.DebugLocal|Default.Build.0 = DebugLocal
+		{B9957BDE-8557-4841-BC95-017F91BEBA26}.Production|Default.ActiveCfg = Production
+		{B9957BDE-8557-4841-BC95-017F91BEBA26}.Production|Default.Build.0 = Production
+		{B9957BDE-8557-4841-BC95-017F91BEBA26}.Production|Default.Deploy.0 = Production
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

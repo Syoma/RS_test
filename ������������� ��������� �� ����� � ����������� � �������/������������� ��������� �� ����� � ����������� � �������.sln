@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "Себестоимость накладных по плану с настройками с доходом", "Себестоимость накладных по плану с настройками с доходом\Себестоимость накладных по плану с настройками с доходом.rptproj", "{ABC809BC-6CE6-4B9B-8E3E-DEA8D3DB2260}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 2
+		SccProjectName0 = \u0022$/ReportServer/Себестоимость\u0020накладных\u0020по\u0020плану\u0020с\u0020настройками\u0020с\u0020доходом\u0022,\u0020OJBBAAAA
+		SccLocalPath0 = .
+		SccProvider0 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		CanCheckoutShared = false
+		SccProjectUniqueName1 = Себестоимость\u0020накладных\u0020по\u0020плану\u0020с\u0020настройками\u0020с\u0020доходом\\Себестоимость\u0020накладных\u0020по\u0020плану\u0020с\u0020настройками\u0020с\u0020доходом.rptproj
+		SccLocalPath1 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection1 = Себестоимость\u0020накладных\u0020по\u0020плану\u0020с\u0020настройками\u0020с\u0020доходом\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Production|Default = Production|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ABC809BC-6CE6-4B9B-8E3E-DEA8D3DB2260}.Debug|Default.ActiveCfg = Debug
+		{ABC809BC-6CE6-4B9B-8E3E-DEA8D3DB2260}.Debug|Default.Build.0 = DebugLocal
+		{ABC809BC-6CE6-4B9B-8E3E-DEA8D3DB2260}.Debug|Default.Deploy.0 = DebugLocal
+		{ABC809BC-6CE6-4B9B-8E3E-DEA8D3DB2260}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{ABC809BC-6CE6-4B9B-8E3E-DEA8D3DB2260}.DebugLocal|Default.Build.0 = DebugLocal
+		{ABC809BC-6CE6-4B9B-8E3E-DEA8D3DB2260}.Production|Default.ActiveCfg = Production
+		{ABC809BC-6CE6-4B9B-8E3E-DEA8D3DB2260}.Production|Default.Build.0 = Production
+		{ABC809BC-6CE6-4B9B-8E3E-DEA8D3DB2260}.Production|Default.Deploy.0 = Production
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

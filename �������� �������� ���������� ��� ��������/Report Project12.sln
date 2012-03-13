@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "Создание терм испр", "Report Project12\Создание терм испр.rptproj", "{8F0611F4-86F3-417E-8EFF-AFC5E8BD06A2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Production|Default = Production|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8F0611F4-86F3-417E-8EFF-AFC5E8BD06A2}.Debug|Default.ActiveCfg = Debug
+		{8F0611F4-86F3-417E-8EFF-AFC5E8BD06A2}.Debug|Default.Build.0 = DebugLocal
+		{8F0611F4-86F3-417E-8EFF-AFC5E8BD06A2}.Debug|Default.Deploy.0 = DebugLocal
+		{8F0611F4-86F3-417E-8EFF-AFC5E8BD06A2}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{8F0611F4-86F3-417E-8EFF-AFC5E8BD06A2}.DebugLocal|Default.Build.0 = DebugLocal
+		{8F0611F4-86F3-417E-8EFF-AFC5E8BD06A2}.Production|Default.ActiveCfg = Production
+		{8F0611F4-86F3-417E-8EFF-AFC5E8BD06A2}.Production|Default.Build.0 = Production
+		{8F0611F4-86F3-417E-8EFF-AFC5E8BD06A2}.Production|Default.Deploy.0 = Production
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

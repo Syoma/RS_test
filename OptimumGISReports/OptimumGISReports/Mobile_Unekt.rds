@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Mobile_Unekt</Name>
+  <DataSourceID>fc25a8ae-d35d-46a3-95ff-2ae51e76be72</DataSourceID>
+  <ConnectionProperties>
+    <Extension>SQL</Extension>
+    <ConnectString>Data Source=hqsrv00;Initial Catalog=Mobile_Unekt</ConnectString>
+  </ConnectionProperties>
+</RptDataSource>

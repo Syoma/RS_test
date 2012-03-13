@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>rc_unact_old</Name>
+  <DataSourceID>eba596c2-7031-4ca0-a0c4-6e387ee9042d</DataSourceID>
+  <ConnectionProperties>
+    <Extension>ODBC</Extension>
+    <ConnectString>Dsn=copy_1</ConnectString>
+  </ConnectionProperties>
+</RptDataSource>

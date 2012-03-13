@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "отчет по оборотам субагентов", "отчет по оборотам субагентов\отчет по оборотам субагентов.rptproj", "{26BBC70E-F3FC-4AC8-8612-6DDFC7461DD5}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 2
+		SccProjectName0 = \u0022$/ReportServer/отчет\u0020по\u0020оборотам\u0020субагентов\u0022,\u0020KVIBAAAA
+		SccLocalPath0 = .
+		SccProvider0 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		CanCheckoutShared = false
+		SccProjectUniqueName1 = отчет\u0020по\u0020оборотам\u0020субагентов\\отчет\u0020по\u0020оборотам\u0020субагентов.rptproj
+		SccLocalPath1 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection1 = отчет\u0020по\u0020оборотам\u0020субагентов\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Production|Default = Production|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{26BBC70E-F3FC-4AC8-8612-6DDFC7461DD5}.Debug|Default.ActiveCfg = Debug
+		{26BBC70E-F3FC-4AC8-8612-6DDFC7461DD5}.Debug|Default.Build.0 = DebugLocal
+		{26BBC70E-F3FC-4AC8-8612-6DDFC7461DD5}.Debug|Default.Deploy.0 = DebugLocal
+		{26BBC70E-F3FC-4AC8-8612-6DDFC7461DD5}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{26BBC70E-F3FC-4AC8-8612-6DDFC7461DD5}.DebugLocal|Default.Build.0 = DebugLocal
+		{26BBC70E-F3FC-4AC8-8612-6DDFC7461DD5}.Production|Default.ActiveCfg = Production
+		{26BBC70E-F3FC-4AC8-8612-6DDFC7461DD5}.Production|Default.Build.0 = Production
+		{26BBC70E-F3FC-4AC8-8612-6DDFC7461DD5}.Production|Default.Deploy.0 = Production
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
