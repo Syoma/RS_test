@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Name>DataSourceProxyTest</Name>
-  <DataSourceID>414c4bb6-9729-4f60-812b-1cb5ffb8fdbd</DataSourceID>
-  <ConnectionProperties>
-    <Extension>SQL</Extension>
-    <ConnectString>Data Source=HQSRV12;Initial Catalog=proxycat</ConnectString>
-  </ConnectionProperties>
-</RptDataSource>

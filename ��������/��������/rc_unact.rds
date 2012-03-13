@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Name>rc_unact</Name>
-  <DataSourceID>f7b574fa-880a-404e-b311-179355e7cb5a</DataSourceID>
-  <ConnectionProperties>
-    <Extension>ODBC</Extension>
-    <ConnectString>Dsn=uncat</ConnectString>
-  </ConnectionProperties>
-</RptDataSource>

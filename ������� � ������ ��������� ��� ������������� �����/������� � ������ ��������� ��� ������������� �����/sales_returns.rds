@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Name>sales_returns</Name>
-  <DataSourceID>737bf5e3-348a-4985-9b26-05b9e91dae95</DataSourceID>
-  <ConnectionProperties>
-    <Extension>ODBC</Extension>
-    <ConnectString>Dsn=copy_1</ConnectString>
-  </ConnectionProperties>
-</RptDataSource>
